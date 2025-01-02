@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#game-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#scoreboard {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+canvas {
+    border: 2px solid #000;
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+}
+
+#ad-space {
+    width: 300px;
+    height: 250px;
+    background: #e4e4e4;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 250px;
+    color: #666;
+    font-size: 16px;
+    border: 1px dashed #aaa;
+}
