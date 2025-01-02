@@ -1,0 +1,40 @@
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = 400;
+canvas.height = 400;
+
+let score = 0;
+let level = 1;
+let gameRunning = true;
+
+// Update scoreboard
+function updateScoreboard() {
+    document.getElementById('score').innerText = `Score: ${score}`;
+    document.getElementById('level').innerText = `Level: ${level}`;
+}
+
+// Game logic
+function gameLoop() {
+    if (!gameRunning) return;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(Math.random() * canvas.width, Math.random() * canvas.height, 50, 50);
+
+    score += 10;
+    if (score % 100 === 0) {
+        level++;
+    }
+    updateScoreboard();
+}
+
+// Start game
+setInterval(gameLoop, 1000);
+
+// Open a new tab with an external link every 15 seconds
+setInterval(() => {
+    window.open('https://example.com', '_blank');
+}, 15000);
+
+// Placeholder for adsense
+console.log('Integrate Google AdSense here for ad rendering.');
